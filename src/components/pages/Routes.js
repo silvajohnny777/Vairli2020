@@ -9,7 +9,7 @@ import Navbar from '../Navbar'
 
             this.state = {
                 loading: false,
-                routesData: []
+                routesData: [],
 
             }
 
@@ -30,6 +30,16 @@ import Navbar from '../Navbar'
                             loading: false,
                         })
                     );
+
+
+                    /*fetch('https://cors-anywhere.herokuapp.com/https://virtuallh.com/api/Airports-extended.json')
+                        .then(response => response.json())
+                            .then(data =>
+                                this.setState({
+                                    airportsData: data,
+                                    loading: false,
+                                })
+                            );*/
             
         }
 
@@ -57,17 +67,17 @@ import Navbar from '../Navbar'
 
                                         {this.state.routesData.length}
 
-                                        <span className="titleInfo">Ai</span>rports 
+                                        <span className="titleInfo">Ro</span>utes
 
                                     </div>
 
-                                    {/*
+                                    {
 
-                                        this.state.routesData.map((airport, index) => {
+                                        this.state.routesData.map((route, index) => {
 
                                             return (
 
-                                                index < 10 && airport.icao &&
+                                                index < 100 && 
 
                                                 <div key={index} className="vairliAirportContent">
 
@@ -75,11 +85,11 @@ import Navbar from '../Navbar'
                     
                                                         <div className="vairliContentTitleTag">
                         
-                                                            <span className="titleInfo">{airport.icao.substring(0,2)}</span>{airport.icao.substring(2)}
+                                                            <span className="titleInfo">{route.airline}</span>
                         
                                                         </div>
                         
-                                                        {airport.name}
+                                                        {route.departure +' -> '+route.arrival}
 
                                                     </div>
                     
@@ -89,7 +99,7 @@ import Navbar from '../Navbar'
 
                                         })
 
-                                    */}
+                                    }
 
                                 </div>
 

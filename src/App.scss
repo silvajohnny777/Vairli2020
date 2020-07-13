@@ -42,6 +42,12 @@
 
 :root {
   --platform-main-color: #635573;
+  --platform-light-color: #fcfaff;
+}
+
+.leaflet-container {
+  width: 100%;
+  height: 50vh;
 }
 
 .vairliMainContainer {
@@ -275,7 +281,13 @@
       margin-top: 50px;
       border-radius: 6px;
       border-left: 5px solid var(--platform-main-color);
-      box-shadow: 0px 2px 2px #00000029;
+      box-shadow: 0px 2px 10px #00000029;
+      transition: .5s;
+
+      &:hover {
+        margin-left: 10px;
+        background-color: var(--platform-light-color);
+      }
 
       .vairliAirportContentText {
         padding: 10px;
@@ -291,14 +303,70 @@
         }
 
         .vairliContentTitleTag {
+          display: flex;
+          align-items: flex-end;
           font-size: 30px;
           font-weight: bold;
           margin-bottom: 10px;
+
+          .titleIata {
+            font-size: 16px;
+            color: var(--platform-main-color);
+          }
     
           .titleInfo {
             color: var(--platform-main-color);
           }
     
+        }
+
+        .vairliAirportContentInfoContainer {
+          color: #666666;
+
+          .vairliAirportContentInfo {
+            display: flex;
+            align-items: center;
+
+            .svg-inline--fa {
+              color: var(--platform-main-color);
+              margin: 10px;
+            }
+
+          }
+
+        }
+
+      }
+    
+    }
+
+    .vairliAirportMapContainer {
+      text-align: justify;
+      margin-top: 50px;
+      border-radius: 6px;
+      border-left: 5px solid var(--platform-main-color);
+      box-shadow: 0px 2px 10px #00000029;
+      width: 100%;
+      height: 50vh;
+    }
+
+    .vairliContentSearchAirport {
+      margin: 40px;
+
+      .airportSearch {
+        cursor: pointer;
+        color: var(--platform-main-color);
+        font-size: 16px;
+        padding: 5px 5px 5px 30px;
+        margin-top: 5%;
+        height: 32px;
+        background-color: #FFFFFF;
+        border: 1px solid #CCC2B8;
+        border-radius: 4px;
+        resize: none;
+
+        &:hover {
+          border: 1px solid var(--platform-main-color);
         }
 
       }

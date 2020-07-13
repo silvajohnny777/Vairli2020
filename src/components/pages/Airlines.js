@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from '../Navbar'
+import { Link } from 'react-router-dom';
 
     class Airlines extends React.Component {
 
@@ -16,7 +17,7 @@ import Navbar from '../Navbar'
                     },
                     {                      
                       "title": "• Why?",
-                      "paragraph": "Vairli is here to change the concept we have about virtual airlines. What we are looking for is connection! Your airline will be able to do codeshare flights, plane leasing as well as other cool features that will increase the experience of your pilot.",
+                      "paragraph": "Vairli is here to change the concept we have about virtual airlines. What we are looking for is connection! Your airline will be able to do codeshare flights, plane leasing as well as other cool features that will increase the experience of your pilots. Furthermore it's really simple to create your va, we offer everything for you from the hosting and domain to the planes creation! Our plane database has over 10 thousand different model of aircrafts.",
                     },       
                 ],
 
@@ -65,6 +66,18 @@ import Navbar from '../Navbar'
                                 })
 
                             }
+
+                            <Link className="vairliButton" to="/airplanes">
+
+                                Airplanes
+
+                            </Link>
+
+                            <Link className="vairliButton" to="/airports">
+
+                                Airports
+
+                            </Link>
 
                         </div>
 

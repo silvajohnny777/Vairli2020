@@ -1,6 +1,5 @@
 import React from 'react'
 import Navbar from '../Navbar'
-import { planes } from '../data/Airplanes'
 
     class Airplanes extends React.Component {
 
@@ -9,9 +8,9 @@ import { planes } from '../data/Airplanes'
             super()
 
             this.state = {
-
-                airplanesData: []
-
+                airplanesData: [],
+                loading: false,
+                error: false,
             }
 
         }
@@ -19,9 +18,8 @@ import { planes } from '../data/Airplanes'
         componentWillMount() {
 
             this.setState({
-                airplanesData: planes
+                loading: true,
             })
-
 
             fetch('https://cors-anywhere.herokuapp.com/https://virtuallh.com/api/Airplanes.json')
                 .then(response => response.json())
@@ -29,8 +27,16 @@ import { planes } from '../data/Airplanes'
                         this.setState({
                             airplanesData: data,
                             loading: false,
+                            error: false,
                         })
-                    );
+                    )
+                    .catch((error) => {
+                      console.error('Error:', error)
+                      this.setState({
+                          loading: false,
+                          error: true,
+                      })
+                    });
             
         }
 
@@ -42,49 +48,67 @@ import { planes } from '../data/Airplanes'
 
                     <Navbar />
 
-                    <div className="vairliContentContainer">
+                    {
 
-                        <div className="vairliContent">
+                        this.state.loading ? 
+                        
+                            'loading...' 
+                            
+                        :
 
-                            <div className="vairliContentTitle">
+                            this.state.error ?
 
-                                <span className="titleInfo">Ai</span>rplanes
+                                'error!'
 
-                            </div>
+                            :
 
-                            {
+                                <div className="vairliContentContainer">
 
-                                this.state.airplanesData.map((airport, index) => {
+                                    <div className="vairliContent">
 
-                                    return (
+                                        <div className="vairliContentTitle">
 
-                                        index < 10 &&
+                                            {this.state.airplanesData.length}
 
-                                        <div key={index} className="vairliAirportContent">
+                                            <span className="titleInfo">Ai</span>rplanes
 
-                                            <div className="vairliAirportContentText">
-            
-                                                <div className="vairliContentTitleTag">
-                
-                                                    <span className="titleInfo">{airport.Designator.substring(0,2)}</span>{airport.Designator.substring(2)}
-                
-                                                </div>
-                
-                                                {airport.ModelFullName}
-
-                                            </div>
-            
                                         </div>
 
-                                    )
+                                        {
 
-                                })
+                                            this.state.airplanesData.map((airport, index) => {
 
-                            }
+                                                return (
 
-                        </div>
+                                                    index < 100 &&
 
-                    </div>
+                                                    <div key={index} className="vairliAirportContent">
+
+                                                        <div className="vairliAirportContentText">
+                        
+                                                            <div className="vairliContentTitleTag">
+                            
+                                                                <span className="titleInfo">{airport.Designator.substring(0,2)}</span>{airport.Designator.substring(2)}
+                            
+                                                            </div>
+                            
+                                                            {airport.ModelFullName}
+
+                                                        </div>
+                        
+                                                    </div>
+
+                                                )
+
+                                            })
+
+                                        }
+
+                                    </div>
+
+                                </div>
+
+                    }
 
                 </>
 

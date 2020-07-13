@@ -38,7 +38,7 @@ import { Link } from 'react-router-dom';
 
                             <span className="titleVersion">
 
-                                <span className="titleInfo">v1</span>.1.5
+                                <span className="titleInfo">v0</span>.1.5
 
                             </span>
 
