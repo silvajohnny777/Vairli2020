@@ -8,10 +8,13 @@ import Airplanes from './components/pages/Airplanes'
 import Routes from './components/pages/Routes'
 import PageNotFound from './components/pages/PageNotFound'
 import Discover from './components/pages/Discover'
+import LiveMap from './components/pages/LiveMap'
 
 import MainPage from './components/pages/MainPage'
 
 function App() {
+
+  const version = 'v0.2.0'
 
   return (
 
@@ -20,10 +23,11 @@ function App() {
     <BrowserRouter basename={process.env.PUBLIC_URL}>
 
       <Switch>
-        <Route path="/" render={() => <MainPage />} exact/>
+        <Route path="/" render={() => <MainPage version={version} />} exact/>
         <Route path="/pilots" component={Pilots} />
         <Route path="/airlines" component={Airlines} />
         <Route path="/airports" component={Airports} />
+        <Route path="/live-flights" component={LiveMap} />
         <Route path="/airplanes" component={Airplanes} />
         <Route path="/routes" component={Routes} />
         <Route path="/about-us" component={Discover} />

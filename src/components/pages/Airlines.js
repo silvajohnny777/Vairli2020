@@ -79,6 +79,12 @@ import { Link } from 'react-router-dom';
 
                             </Link>
 
+                            <Link className="vairliButton" to="/live-flights">
+
+                                Live flights
+
+                            </Link>
+
                         </div>
 
                     </div>

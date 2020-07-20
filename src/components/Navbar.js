@@ -1,5 +1,5 @@
 import React from 'react'
-import vairliLogoBlack from '../images/vairli_black.png'
+//import vairliLogoBlack from '../images/vairli_black.png'
 import { Link } from 'react-router-dom';
 
     class Navbar extends React.Component {
@@ -27,8 +27,12 @@ import { Link } from 'react-router-dom';
                         <div className="navbarContent">
 
                             <Link className="navbarHomeButton" to="/">
-            
-                                <img alt="vairliLogoHome" className="vairliLogoHome" src={vairliLogoBlack} />
+
+                                <div className="vairliTitle">
+
+                                    <span className="titleInfo">va</span>irli
+
+                                </div>
                             
                             </Link>
 

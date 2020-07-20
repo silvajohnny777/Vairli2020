@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { withLeaflet } from "react-leaflet";
 import { Marker } from "react-leaflet";
 import { Marker as LeafletMarker } from "leaflet-rotatedmarker";
