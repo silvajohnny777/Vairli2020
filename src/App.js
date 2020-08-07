@@ -11,6 +11,7 @@ import Discover from './components/pages/Discover'
 import LiveMap from './components/pages/LiveMap'
 
 import MainPage from './components/pages/MainPage'
+//"start": "react-scripts start", - pachage json
 
 function App() {
 
