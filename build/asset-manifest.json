@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.6256d4bb.chunk.css",
+    "main.js": "/static/js/main.cdfd77db.chunk.js",
+    "main.js.map": "/static/js/main.cdfd77db.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.a2204085.js",
+    "runtime-main.js.map": "/static/js/runtime-main.a2204085.js.map",
+    "static/js/2.0867f8dc.chunk.js": "/static/js/2.0867f8dc.chunk.js",
+    "static/js/2.0867f8dc.chunk.js.map": "/static/js/2.0867f8dc.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.dec95ec4579870046480982b8278b637.js": "/precache-manifest.dec95ec4579870046480982b8278b637.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.6256d4bb.chunk.css.map": "/static/css/main.6256d4bb.chunk.css.map",
+    "static/js/2.0867f8dc.chunk.js.LICENSE.txt": "/static/js/2.0867f8dc.chunk.js.LICENSE.txt",
+    "static/media/b788.svg": "/static/media/b788.eeaaa167.svg",
+    "static/media/b788Icon.svg": "/static/media/b788Icon.04b6b1d6.svg",
+    "static/media/App.scss": "/static/media/vairliBGMarshallerVector.5b799f06.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a2204085.js",
+    "static/js/2.0867f8dc.chunk.js",
+    "static/css/main.6256d4bb.chunk.css",
+    "static/js/main.cdfd77db.chunk.js"
+  ]
+}
