@@ -595,11 +595,11 @@ const plane = new L.Icon({
                                                             zIndex: '999',
                                                             position: 'absolute',
                                                             marginLeft: '20%',
-                                                            marginTop: '350px',
                                                             //marginTop: '200px',
                                                             borderRadius: '5px',
                                                             color: '#635573',
-                                                            opacity: '0.85'
+                                                            opacity: '0.85',
+                                                            bottom: '5%'
                                                         }}>
                                                             <div className="flightInfoBoxContent" style={{
                                                                 padding: '10px'
